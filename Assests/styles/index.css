@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
+
 body {
   background-color: black;
 }
@@ -24,4 +28,32 @@ body {
   width: 138px;
   height: 24px;
   margin-bottom: 23px;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.optionsContainer{
+  border-right: 1px solid white;
+  height: 100vh;
+}
+.optionItem{
+  height: 48px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.optionItem img{
+  width: 20px;
+  height: 20px;
+}
+.optionItem h2{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: left;
 }
