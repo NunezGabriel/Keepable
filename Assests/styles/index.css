@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+}
+
+.nav_text {
+  color: white;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  gap: 117px;
+  margin-left: 30px;
+  margin-top: 23px;
+}
+
+.navbar__menu-icon {
+  width: 138px;
+  height: 24px;
+}
