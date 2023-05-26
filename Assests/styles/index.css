@@ -11,7 +11,11 @@
 body {
   background-color: black;
 }
-
+input {
+  all: unset;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
 .nav_text {
   color: white;
   font-size: 14px;
@@ -57,4 +61,41 @@ body {
   line-height: 20px;
   letter-spacing: 0.25px;
   text-align: left;
+}
+.mainContainer{
+  display: grid;
+  grid-template-rows: 30% 70%;
+}
+.inputContainer{
+  display: grid;
+  place-items: center;
+}
+.inputBox{
+  width: 600px;
+  height: 150px;
+  border-radius: 8px;
+  background-color: white;
+  display: grid;
+  padding: 20px;
+  gap: 10px;
+}
+.inputActions{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.inputActions img{
+  width: 18px;
+  height: 18px;
+}
+.inputActions{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+.notesContainer{
+
 }
