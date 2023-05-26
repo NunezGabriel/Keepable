@@ -1,4 +1,6 @@
-const Main = DOMHandler('.mainContainer')
-const titleHead = CreateTitle('este es un titulo') 
-
-Main.load(titleHead.render())
+const Main = DOMHandler('.inputContainer')
+const inputWhite = CreateInput()
+const text = CreateTitle('hola')
+const titulito = DOMHandler('.notesContainer')
+Main.load(inputWhite.render())
+titulito.load(text.render())

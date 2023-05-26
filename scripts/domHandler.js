@@ -20,11 +20,26 @@ const CreateTitle = (title) =>{
 }
 
 const CreateInput = () =>{
-
+    const temmplate = 
+    `
+        <section class = 'inputBox'>
+            <input type="text" placeholder="Title">
+            <input type="textarea" placeholder="Take a note...">
+            <div class = 'inputActions'>
+                <img src="Assests/images/palet-icon.svg">
+                <p style = 'color: black;'>Keep it!</p>
+            </div>
+        </section>
+    `
+    return{
+        render(){
+            return temmplate
+        }
+    }
 }
 
 const CreateCard = () =>{
-
+    
 }
 
 const addListeners = () =>{
