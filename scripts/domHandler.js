@@ -52,7 +52,7 @@ const keepitAction = () =>{
                 <h2>${title.value}</h2>
                 <p>${bodyText.value}</p>
                 <div class = 'actionsNotes'>
-                    <div class="iconPaletArea">
+                    <div class="iconPaletArea iPA">
                         <img src="Assests/images/palet-icon.svg" alt="">
                     </div>
                     <div class="iconPaletArea">
@@ -65,7 +65,18 @@ const keepitAction = () =>{
 }
 
 const actionEvent = () =>{
-    const palet = document.querySelector()
+    const palet = document.querySelector('.iconPaletArea')
+    let activador = false
+    palet.addEventListener('click', ()=>{
+        if(!activador){
+            console.log('hola')
+            activador = true
+        }
+        else{
+            console.log('adios')
+            activador = false
+        }
+    })
 }
 
 
