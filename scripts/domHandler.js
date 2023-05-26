@@ -22,10 +22,12 @@ const CreateTitle = (title) => {
 const CreateInput = () => {
   const temmplate = `
         <section class = 'inputBox'>
-            <input class = 'title' id = 'title' name = 'title' type="text" placeholder="Title">
-            <input class = 'bodyText' id = 'bodyText' name = 'bodyText' type="textarea" placeholder="Take a note...">
+            <input class = 'title' type="text" placeholder="Title">
+            <input class = 'bodyText' type="textarea" placeholder="Take a note...">
             <div class = 'inputActions'>
-                <img src="Assests/images/palet-icon.svg">
+                <div class = 'iconPaletArea'>
+                    <img src="Assests/images/palet-icon.svg">
+                </div>
                 <p class= 'keepit' style = 'color: black;'>Keep it!</p>
             </div>
         </section>
@@ -38,10 +40,32 @@ const CreateInput = () => {
 };
 
 const keepitAction = () =>{
-    const input = document.querySelector('.inputBox')
-    input.addEventListener('click',()=>{
-        
+    const keepit = document.querySelector('.keepit')
+    const title = document.querySelector('.title')
+    const bodyText = document.querySelector('.bodyText')
+    const notesContainer = document.querySelector('.notesContainer')
+    keepit.addEventListener('click',()=>{
+        let CreateCard = document.createElement('DIV')
+        CreateCard.setAttribute('class', 'card')
+        CreateCard.innerHTML = 
+        `
+                <h2>${title.value}</h2>
+                <p>${bodyText.value}</p>
+                <div class = 'actionsNotes'>
+                    <div class="iconPaletArea">
+                        <img src="Assests/images/palet-icon.svg" alt="">
+                    </div>
+                    <div class="iconPaletArea">
+                        <img src="Assests/images/trash.svg" alt="">
+                    </div>
+                </div>
+        `
+        notesContainer.appendChild(CreateCard)
     })
+}
+
+const actionEvent = () =>{
+    const palet = document.querySelector()
 }
 
 

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27');
 
+
+
 *{
   margin: 0;
   padding: 0;
@@ -74,7 +76,7 @@ input {
   width: 600px;
   height: 150px;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: grid;
   padding: 20px;
   gap: 10px;
@@ -96,14 +98,52 @@ input {
 .inputActions img{
   width: 18px;
   height: 18px;
+  
 }
-.inputActions{
-  font-size: 18px;
+.iconPaletArea{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: grid;
+  place-content: center;
+}
+.notesContainer{
+  padding-left: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 260px;
+  height: 260px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 20px 0 20px;
+  position: relative;
+}
+
+.card h2 {
+  color: black;
+  font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.25px;
   text-align: left;
 }
-.notesContainer{
+.card p{
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
 
+.actionsNotes{
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  gap: 10px;
 }
