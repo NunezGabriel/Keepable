@@ -28,16 +28,16 @@ function showNotes() {
             <div class="iconPaletArea">
               <ul  class ='colorS hidden'>
                 <div class="colorSContainer">
-                  <li class="selectColor blanco"></li>
-                  <li class="selectColor rojo"></li>
-                  <li class="selectColor naranja"></li>
-                  <li class="selectColor amarillo"></li>
-                  <li class="selectColor verde" ></li>
-                  <li class="selectColor acua"></li>
-                  <li class="selectColor celeste"></li>
-                  <li class="selectColor azul"></li>
-                  <li class="selectColor morado"></li>
-                  <li class="selectColor rosado"></li>
+                  <li class="selectColor blanco" style="background-color: #FFFFFF;"></li>
+                  <li class="selectColor rojo" style="background-color: #F28B82;"></li>
+                  <li class="selectColor naranja" style="background-color: #FBBC04;"></li>
+                  <li class="selectColor amarillo" style="background-color: #FFF475 ;"></li>
+                  <li class="selectColor verde"  style="background-color: #CCFF90;"></li>
+                  <li class="selectColor acua" style="background-color: #A7FFEB;"></li>
+                  <li class="selectColor celeste" style="background-color: #CBF0F8;"></li>
+                  <li class="selectColor azul" style="background-color: #AECBFA;"></li>
+                  <li class="selectColor morado" style="background-color: #D7AEFB;"></li>
+                  <li class="selectColor rosado" style="background-color: #FDCFE8;"></li>
                 </div>
               </ul>
               <img onclick="showPalet(this)" src="Assests/images/palet-icon.svg" alt="">
