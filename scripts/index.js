@@ -28,16 +28,16 @@ function showNotes() {
             <div class="iconPaletArea">
               <ul  class ='colorS hidden'>
                 <div class="colorSContainer">
-                  <li class="selectColor blanco" style="background-color: #FFFFFF;"></li>
-                  <li class="selectColor rojo" style="background-color: #F28B82;"></li>
-                  <li class="selectColor naranja" style="background-color: #FBBC04;"></li>
-                  <li class="selectColor amarillo" style="background-color: #FFF475 ;"></li>
-                  <li class="selectColor verde"  style="background-color: #CCFF90;"></li>
-                  <li class="selectColor acua" style="background-color: #A7FFEB;"></li>
-                  <li class="selectColor celeste" style="background-color: #CBF0F8;"></li>
-                  <li class="selectColor azul" style="background-color: #AECBFA;"></li>
-                  <li class="selectColor morado" style="background-color: #D7AEFB;"></li>
-                  <li class="selectColor rosado" style="background-color: #FDCFE8;"></li>
+                  <li class="selectColor blanco" style="background-color: #FFFFFF;" onclick = "setColorWhite(this)"></li>
+                  <li class="selectColor rojo" style="background-color: #F28B82;" onclick = "setColorRed(this)"></li>
+                  <li class="selectColor naranja" style="background-color: #FBBC04;" onclick = "setColorOrange(this)"></li>
+                  <li class="selectColor amarillo" style="background-color: #FFF475;" onclick = "setColorYellow(this)"></li>
+                  <li class="selectColor verde"  style="background-color: #CCFF90;" onclick = "setColorGreen(this)"></li>
+                  <li class="selectColor acua" style="background-color: #A7FFEB;" onclick = "setColorAqua(this)"></li>
+                  <li class="selectColor celeste" style="background-color: #CBF0F8;" onclick = "setColorSoftBlue(this)"></li>
+                  <li class="selectColor azul" style="background-color: #AECBFA;" onclick = "setColorBlue(this)"></li>
+                  <li class="selectColor morado" style="background-color: #D7AEFB;" onclick = "setColorPurple(this)"></li>
+                  <li class="selectColor rosado" style="background-color: #FDCFE8;" onclick = "setColorPink(this)"></li>
                 </div>
               </ul>
               <img onclick="showPalet(this)" src="Assests/images/palet-icon.svg" alt="">
@@ -52,6 +52,38 @@ function showNotes() {
   });
 }
 showNotes();
+//////////////////////////////////////////////
+function setColorRed(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('rojo')
+}
+function setColorwhite(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('blanco')
+}
+function setColorOrange(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('naranja')
+}
+function setColorYellow(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('amarillo')
+}
+function setColorGreen(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('verde')
+}
+function setColorAqua(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('acua')
+}
+function setColorSoftBlue(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('celeste')
+}
+function setColorBlue(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('azul')
+}
+function setColorPurple(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('morado')
+}
+function setColorPink(elem){
+  elem.parentElement.parentElement.parentElement.parentElement.parentElement.classList.toggle('rosado')
+}
+//////////////////////////////////////////////
 
 function showPalet(elem) {
   elem.parentElement.children[0].classList.toggle("show");

@@ -189,3 +189,33 @@ li {
   background-color: white;
   border: 1px solid #999B9E;
 }
+.blanco{
+  background-color: #FFFFFF;
+}
+.rojo{
+  background-color: #F28B82;
+}
+.naranja{
+  background-color: #FBBC04;
+}
+.amarillo{
+  background-color: #FFF475;
+}
+.verde{
+  background-color: #CCFF90;
+}
+.acua{
+  background-color: #A7FFEB;
+}
+.celeste{
+  background-color: #CBF0F8;
+}
+.azul{
+  background-color: #AECBFA;;
+}
+.morado{
+  background-color: #D7AEFB;
+}
+.rosado{
+  background-color: #FDCFE8;
+}
