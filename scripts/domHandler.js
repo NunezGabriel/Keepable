@@ -23,24 +23,12 @@ const CreateInput = () => {
   const temmplate = `
         <section class="inputBox">
             <input class="title" type="text" placeholder="Title">
-            <input class="bodyText" type="textarea" placeholder="Take a note...">
+            <textarea class="bodyText" type="textarea" placeholder="Take a note..."></textarea>
             <div class="inputActions">
                 <div class="iconPaletArea">
-                    <div class ='colorS hidden'>
-                        <div class="selectColor blanco"></div>
-                        <div class="selectColor rojo"></div>
-                        <div class="selectColor naranja"></div>
-                        <div class="selectColor amarillo"></div>
-                        <div class="selectColor verde" ></div>
-                        <div class="selectColor acua"></div>
-                        <div class="selectColor celeste"></div>
-                        <div class="selectColor azul"></div>
-                        <div class="selectColor morado"></div>
-                        <div class="selectColor rosado"></div>
-                    </div>
                     <img src="Assests/images/palet-icon.svg">
                 </div>
-                <p class="keepit" style="color: black;">Keep it!</p>
+                <button class="keepit" style="color: black;">Kepp it!</button>
             </div>
         </section>
     `;
@@ -51,23 +39,24 @@ const CreateInput = () => {
   };
 };
 
+/*
 const actionEvent = () => {
   const palets = document.querySelector(".iconPaletArea");
-  const colorSelector = document.querySelector('.colorS')
+  const colorSelector = document.querySelector(".colorS");
   let activador = false;
 
   const clickHandler = () => {
     if (!activador) {
-      colorSelector.classList.toggle('show')
-      colorSelector.classList.toggle('hidden')
+      colorSelector.classList.toggle("show");
+      colorSelector.classList.toggle("hidden");
       activador = true;
     } else {
-      colorSelector.classList.toggle('hidden')
-      colorSelector.classList.toggle('show')
+      colorSelector.classList.toggle("hidden");
+      colorSelector.classList.toggle("show");
       activador = false;
     }
   };
-    palets.addEventListener("click", clickHandler);
+  palets.addEventListener("click", clickHandler);
 };
 
 const keepitAction = () => {
@@ -112,3 +101,4 @@ const keepitAction = () => {
 const CreateCard = () => {};
 
 const addListeners = () => {};
+*/
