@@ -5,15 +5,21 @@ Main.load(inputWhite.render());
 const formInputs = document.querySelector(".inputBox");
 const formBox = document.querySelector(".inputActions");
 const notesContainer = document.querySelector(".notesContainer");
+const trastView = document.querySelector(".trash");
+const notesView = document.querySelector(".notes");
+
 (titleTag = formInputs.querySelector("input")),
   (descTag = formInputs.querySelector("textarea")),
   (addBtn = formBox.querySelector("button"));
 
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+const trash = JSON.parse(localStorage.getItem("trash") || "[]");
 
 function showNotes() {
   document.querySelectorAll(".card").forEach((note) => note.remove());
-  notes.forEach((note) => {
+  const inputNote = document.querySelector(".inputContainer");
+  inputNote.classList.remove("hidden");
+  notes.forEach((note, index) => {
     let litNote = `
       <div class="card">
         <h2>${note.title}</h2>
@@ -32,10 +38,10 @@ function showNotes() {
                 <li class="selectColor morado"></li>
                 <li class="selectColor rosado"></li>
               </ul>
-              <img onclick="showMenu(this)" src="Assests/images/palet-icon.svg" alt="">
+              <img onclick="showPalet(this)" src="Assests/images/palet-icon.svg" alt="">
             </div>
             <div class="iconPaletArea">
-              <img src="Assests/images/trash.svg" alt="">
+              <img onclick="trashNote(${index})" src="Assests/images/trash.svg" alt="">
             </div>
         </div>
       </div>
@@ -45,10 +51,78 @@ function showNotes() {
 }
 showNotes();
 
-function showMenu(elem) {
+function showPalet(elem) {
   elem.parentElement.children[0].classList.add("show");
-  document.addEventListener("click", (e) => {});
 }
+
+function trashNote(noteId) {
+  var deletedNote = notes.splice(noteId, 1)[0];
+
+  trash.push(deletedNote);
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+  localStorage.setItem("trash", JSON.stringify(trash));
+  showNotes();
+}
+
+function deleteNote(trashId) {
+  trash.splice(trashId, 1);
+  localStorage.setItem("trash", JSON.stringify(trash));
+  showTrash();
+}
+
+function restoreNote(trashId) {
+  var restoreNote = trash.splice(trashId, 1)[0];
+
+  notes.push(restoreNote);
+  localStorage.setItem("trash", JSON.stringify(trash));
+  localStorage.setItem("notes", JSON.stringify(notes));
+  showTrash();
+}
+
+function showTrash() {
+  document.querySelectorAll(".card").forEach((trash) => trash.remove());
+  const inputNote = document.querySelector(".inputContainer");
+  inputNote.classList.add("hidden");
+  trash.forEach((trash, index) => {
+    let litNote = `
+      <div class="card">
+        <h2>${trash.title}</h2>
+        <p>${trash.description}</p>
+        <div class="actionsNotes">
+            <div class="iconPaletArea">
+              <ul  class ='colorS hidden'>
+                <li class="selectColor blanco"></li>
+                <li class="selectColor rojo"></li>
+                <li class="selectColor naranja"></li>
+                <li class="selectColor amarillo"></li>
+                <li class="selectColor verde" ></li>
+                <li class="selectColor acua"></li>
+                <li class="selectColor celeste"></li>
+                <li class="selectColor azul"></li>
+                <li class="selectColor morado"></li>
+                <li class="selectColor rosado"></li>
+              </ul>
+              <img onclick="deleteNote(${index})" src="Assests/images/trash.svg" alt="">
+            </div>
+            <div class="iconPaletArea">
+              <img onclick="restoreNote(${index})"  src="Assests/images/restore-icon.svg" alt="">
+            </div>
+        </div>
+      </div>
+    `;
+    notesContainer.insertAdjacentHTML("afterbegin", litNote);
+  });
+}
+
+trastView.addEventListener("click", (e) => {
+  showTrash();
+});
+
+notesView.addEventListener("click", (e) => {
+  document.querySelectorAll(".card").forEach((note) => note.remove());
+  showNotes();
+});
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
