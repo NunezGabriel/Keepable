@@ -26,6 +26,18 @@ const CreateInput = () => {
             <input class="bodyText" type="textarea" placeholder="Take a note...">
             <div class="inputActions">
                 <div class="iconPaletArea">
+                    <div class ='colorS hidden'>
+                        <div class="selectColor blanco"></div>
+                        <div class="selectColor rojo"></div>
+                        <div class="selectColor naranja"></div>
+                        <div class="selectColor amarillo"></div>
+                        <div class="selectColor verde" ></div>
+                        <div class="selectColor acua"></div>
+                        <div class="selectColor celeste"></div>
+                        <div class="selectColor azul"></div>
+                        <div class="selectColor morado"></div>
+                        <div class="selectColor rosado"></div>
+                    </div>
                     <img src="Assests/images/palet-icon.svg">
                 </div>
                 <p class="keepit" style="color: black;">Keep it!</p>
@@ -40,23 +52,22 @@ const CreateInput = () => {
 };
 
 const actionEvent = () => {
-  const palets = document.querySelectorAll(".iconPaletArea");
+  const palets = document.querySelector(".iconPaletArea");
+  const colorSelector = document.querySelector('.colorS')
   let activador = false;
 
   const clickHandler = () => {
     if (!activador) {
-      console.log("hola");
+      colorSelector.classList.toggle('show')
+      colorSelector.classList.toggle('hidden')
       activador = true;
     } else {
-      console.log("adios");
+      colorSelector.classList.toggle('hidden')
+      colorSelector.classList.toggle('show')
       activador = false;
     }
   };
-
-  palets.forEach((palet) => {
-    palet.removeEventListener("click", clickHandler);
-    palet.addEventListener("click", clickHandler);
-  });
+    palets.addEventListener("click", clickHandler);
 };
 
 const keepitAction = () => {
@@ -72,6 +83,18 @@ const keepitAction = () => {
                 <p>${bodyText.value}</p>
                 <div class="actionsNotes">
                     <div class="iconPaletArea iPA">
+                        <div class ='colorS hidden'>
+                            <div class="selectColor blanco"></div>
+                            <div class="selectColor rojo"></div>
+                            <div class="selectColor naranja"></div>
+                            <div class="selectColor amarillo"></div>
+                            <div class="selectColor verde" ></div>
+                            <div class="selectColor acua"></div>
+                            <div class="selectColor celeste"></div>
+                            <div class="selectColor azul"></div>
+                            <div class="selectColor morado"></div>
+                            <div class="selectColor rosado"></div>
+                        </div>
                         <img src="Assests/images/palet-icon.svg" alt="">
                     </div>
                     <div class="iconPaletArea">

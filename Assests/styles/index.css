@@ -107,6 +107,7 @@ input {
   background-color: rgba(255, 255, 255, 0.5);
   display: grid;
   place-content: center;
+  position: relative;
 }
 .notesContainer{
   padding-left: 25px;
@@ -146,4 +147,23 @@ input {
   position: absolute;
   bottom: 5px;
   gap: 10px;
+}
+.colorS{
+  width: 155px;
+  height: 65px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 30px;
+  left: -55px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.selectColor{
+
+}
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
 }
