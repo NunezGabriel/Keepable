@@ -27,16 +27,18 @@ function showNotes() {
         <div class="actionsNotes">
             <div class="iconPaletArea">
               <ul  class ='colorS hidden'>
-                <li class="selectColor blanco"></li>
-                <li class="selectColor rojo"></li>
-                <li class="selectColor naranja"></li>
-                <li class="selectColor amarillo"></li>
-                <li class="selectColor verde" ></li>
-                <li class="selectColor acua"></li>
-                <li class="selectColor celeste"></li>
-                <li class="selectColor azul"></li>
-                <li class="selectColor morado"></li>
-                <li class="selectColor rosado"></li>
+                <div class="colorSContainer">
+                  <li class="selectColor blanco"></li>
+                  <li class="selectColor rojo"></li>
+                  <li class="selectColor naranja"></li>
+                  <li class="selectColor amarillo"></li>
+                  <li class="selectColor verde" ></li>
+                  <li class="selectColor acua"></li>
+                  <li class="selectColor celeste"></li>
+                  <li class="selectColor azul"></li>
+                  <li class="selectColor morado"></li>
+                  <li class="selectColor rosado"></li>
+                </div>
               </ul>
               <img onclick="showPalet(this)" src="Assests/images/palet-icon.svg" alt="">
             </div>
@@ -52,7 +54,7 @@ function showNotes() {
 showNotes();
 
 function showPalet(elem) {
-  elem.parentElement.children[0].classList.add("show");
+  elem.parentElement.children[0].classList.toggle("show");
 }
 
 function trashNote(noteId) {
