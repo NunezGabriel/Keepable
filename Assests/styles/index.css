@@ -51,11 +51,16 @@ li {
 }
 .optionItem {
   height: 48px;
+  width: 100%;
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 0 20px;
   margin-top: 10px;
+  transition: 1s;
+}
+.optionItem:hover{
+  background-color: #999B9E;
 }
 .optionItem img {
   width: 20px;
@@ -184,7 +189,14 @@ li {
   width: 25px;
   border-radius: 50%;
 }
-
+.keepit{
+  border: none;
+  background-color: white;
+  transition: 1s;
+}
+.keepit:hover{
+  transform: scale(1.2);
+}
 .blanco{
   background-color: white;
   border: 1px solid #999B9E;
