@@ -61,6 +61,7 @@ li {
 }
 .optionItem:hover{
   background-color: #999B9E;
+  cursor: pointer;
 }
 .optionItem img {
   width: 20px;
