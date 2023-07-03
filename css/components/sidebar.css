@@ -1,0 +1,45 @@
+.aside {
+  padding-top: 8px;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #fff;
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background-color: #1d2128;
+  z-index: 1;
+}
+
+.aside-link {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  height: 48px;
+  padding: 14px 0 14px 20px;
+}
+
+.aside-link:hover {
+  background-color: var(--gray-200);
+  border-radius: 0px 25px 25px 0px;
+}
+
+.trash-icon {
+  width: 25px;
+  height: 24px;
+}
+
+.notes-icon {
+  padding-left: 1px;
+}
+
+@media (max-width: 880px) {
+  .aside {
+    width: 70px;
+  }
+
+  .aside-title {
+    display: none;
+  }
+}

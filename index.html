@@ -3,40 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Assests/styles/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Keepable</title>
   </head>
-  <body>
-    <header class="header">
-      <div class="container navbar">
-        <img src="Assests/images/keepable_logo.png" class="navbar__menu-icon" />
-        <h2 class="nav_text">Welcome to {keepable}</h2>
-      </div>
-    </header>
-
-    <section class="body">
-      <div class="optionsContainer">
-        <div class="optionItem notes">
-          <img src="./Assests/images/Vector.svg" alt="" />
-          <span>Notes</span>
+  <body id="body">
+    <div>
+      <header class="header">
+        <img
+          class="logo-img"
+          src="assets/img/keepable-logo.png"
+          alt="keepable-logo"
+        />
+        <div class="header-text__container">
+          <p class="heading white">Welcome to {keepable}</p>
         </div>
+      </header>
+      <section class="higher-section">
+        <aside class="aside"></aside>
+        <main id="main" class="main"></main>
+      </section>
+    </div>
+    <div class="js-edit-view"></div>
 
-        <div class="optionItem trash">
-          <img src="./Assests/images/delete-icon.svg" alt="" />
-          <span>Trash</span>
-        </div>
-      </div>
+    <script src="scripts/dom-handler.js"></script>
+    <script src="scripts/store.js"></script>
 
-      <div class="mainContainer">
-        <div class="inputContainer"></div>
-        <div class="notesContainer"></div>
-      </div>
-    </section>
+    <script src="scripts/partials/sidebar.js"></script>
 
-    <script src="./scripts/domHandler.js"></script>
-    <script src="./scripts/setcolor.js"></script>
-    <script src="./scripts/views.js"></script>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/storage.js"></script>
+    <script src="scripts/views/layout.js"></script>
+    <script src="scripts/views/form-view.js"></script>
+    <script src="scripts/views/cards-view.js"></script>
+    <script src="scripts/views/trash-view.js"></script>
+    <script src="scripts/views/edit-view.js"></script>
+
+    <script src="scripts/index.js"></script>
   </body>
-</html> 
+</html>

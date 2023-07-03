@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 117px;
+  border-bottom: 1px solid #fff;
+  padding: 30px 23px;
+  position: fixed;
+  width: 100%;
+  background-color: #1d2128;
+  height: 70px;
+  z-index: 3;
+}
+
+.logo-img {
+  width: 138px;
+}
+
+.header-text__container {
+  width: fit-content;
+}
+
+@media (max-width: 880px) {
+  .header {
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
