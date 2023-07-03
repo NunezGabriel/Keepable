@@ -11,8 +11,6 @@ Keepable is a take-nothing service and productivity app designed by Codeable stu
 
 There's only one type of user for Keepable application, this will be referred to as "user"
 
-## **Stories:**
-### **V1:**
 ### User can see a message when there are no notes
 
 As a user, I can see a message when no notes have been added yet.
